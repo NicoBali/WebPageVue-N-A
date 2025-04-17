@@ -6,8 +6,8 @@
             </router-link>
         </div>
         <nav class="menu">
-            <a href="#">Soy un talento</a> |
-            <router-link to="/company">Soy una empresa</router-link>|
+            <router-link to="/talent">Soy un talento</router-link> |
+            <router-link to="/company">Soy una empresa</router-link> |
             <a href="#">Regístrate</a> |
             <a href="#">Inicia Sesión</a> 
         </nav>
