@@ -47,7 +47,9 @@ section h2,
 section p,
 section li,
 section ul,
-text{
+div.content,
+div.text,
+strong{
     background-color: transparent;
 }
 
@@ -66,7 +68,7 @@ section {
 
 img {
     border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    box-shadow: 0 4px 10px rgb(0, 0, 0);  /* Sombra suave */
     margin: 15px 0; /* Espaciado arriba y abajo */
    border: #330047 solid 4px;
    height: auto;
