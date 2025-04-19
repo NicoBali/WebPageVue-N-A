@@ -8,7 +8,7 @@
         <nav class="menu">
             <router-link to="/talent">Soy un talento</router-link> |
             <router-link to="/company">Soy una empresa</router-link> |
-            <a href="#">Regístrate</a> |
+            <router-link to="/Register">Regístrate</router-link> |
             <router-link to="/login">Inicia Sesión</router-link> 
         </nav>
     </header>

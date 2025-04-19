@@ -2,7 +2,7 @@
   <section class="call-to-action">
     <h2>¿Listo para Comenzar?</h2>
     <p>Regístrate ahora y empieza a encontrar el talento perfecto para tu empresa.</p>
-    <button class="cta-button"><a href="/RegistroUsuario/registroUsuario.html">¡Regístrate!</a></button>
+    <button class="cta-button"><router-link to="/Register">¡Regístrate!</router-link></button>
   </section>
 </template>
 
