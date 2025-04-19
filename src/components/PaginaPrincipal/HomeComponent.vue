@@ -95,25 +95,9 @@ section {
   width: 50%;
   margin: 0 auto;           /* Centrado horizontal */
   text-align: center;       /* Centra el texto dentro */
+  background-color: #ffffff;
+  color:blueviolet;
 }
 
-h2 {
-  font-size: 2rem;
-  color: #4B0082;
-  font-weight: bold;
-  text-shadow: 
-    -1px -1px 0 #ffffff,  
-     1px -1px 0 #fff,
-    -1px  1px 0 #fff,
-     1px  1px 0 #fff; /* Esto crea un borde blanco alrededor del texto */
-}
 
-p {
-  color: #4B0082;
-  text-shadow: 
-    -1px -1px 0 #fff,  
-     1px -1px 0 #fff,
-    -1px  1px 0 #fff,
-     1px  1px 0 #fff;
-}
 </style>
