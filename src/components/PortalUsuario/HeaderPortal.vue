@@ -1,39 +1,39 @@
 <template>
     <header>
-       <div class="logo">
-            <router-link to="/homepage">
-                <h1>Talent Job</h1>
-            </router-link>
+    <div class="logo">
+             <h1>Talent Job</h1> 
         </div>
+        <div class="bienvenido"><h1>¡Bienvenido, Usuario!</h1>
+        <p>Gestiona todo desde un solo lugar</p>
+    </div>
         <nav class="menu">
-            <router-link to="/talent">Soy un talento</router-link> |
-            <router-link to="/company">Soy una empresa</router-link> |
-            <a href="#">Regístrate</a> |
-            <router-link to="/login">Inicia Sesión</router-link> 
+            <router-link to="/login">Cerrar Sesión</router-link> 
         </nav>
     </header>
-  
 </template>
 
 <script>
 export default {
-    name: 'HeaderComponent'
+    name: 'HeaderPortal'
 
-};
+}
 </script>
 
 <style scoped>
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.bienvenido{
+    text-align: center; 
+    flex: 1;
 }
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
     background: linear-gradient(to right, #4B0082, #8A2BE2); /* Degradado de morado oscuro a morado claro */
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: white;
 }
 
 header .logo h1 {
@@ -41,6 +41,7 @@ header .logo h1 {
     color: #FFFFFF; /* Blanco */
     font-size: 24px;
 }
+
 
 header .menu a {
     color: #FFFFFF; /* Blanco */
@@ -59,11 +60,6 @@ header .menu {
     gap: 10px;
 }
 
-.logo h1 {
-    margin: 0;
-    color: white;
-}
-
 .logo a {
     text-decoration: none; /* Elimina el subrayado */
     color: inherit; /* Mantiene el color del texto */
@@ -72,11 +68,15 @@ header .menu {
   .logo a h1 {
     margin: 0; /* Evita margenes en el título */
   }
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 1.5rem;
+    }
 
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
+    .hero p {
+        font-size: 0.95rem;
+    }
 }
 
 </style>
