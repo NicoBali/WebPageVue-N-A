@@ -43,7 +43,7 @@
 
         <div class="talento-action">
             <h2>Comienza ahora</h2>
-            <button class="btn-start"> <router-link to="/Register">¡Regístrate como Talento!</router-link></button>
+            <button class="btn-start"> <router-link :to="{ path: '/register', query: { tipo: 'talento' } }">¡Regístrate como Talento!</router-link></button>
         </div>
     </div>
 </section>

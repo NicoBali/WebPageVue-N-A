@@ -2,24 +2,24 @@
   <div class="inicio-sesion-container">
     <div class="card">
       <div class="card-body">
-        <h2 class="text-center">Iniciar Sesión</h2>
+        <h2 class="form-title"> Ingresa a TalentJob</h2>
         <form @submit.prevent="handleSubmit" novalidate>
-          <div class="mb-3">
-            <label for="emailInput" class="form-label">Correo</label>
+          <div class="mb-3 input-icon-wrapper">
+            <span class="input-icon" aria-hidden="true">✉️</span>
             <input
               type="email"
-              class="form-control"
+              class="form-control input-with-icon"
               id="emailInput"
               aria-describedby="emailHelp"
               placeholder="Ingrese su correo"
               v-model="email"
             />
           </div>
-          <div class="mb-3">
-            <label for="passwordInput" class="form-label">Contraseña</label>
+          <div class="mb-3 input-icon-wrapper">
+            <span class="input-icon" aria-hidden="true">🔒</span>
             <input
               type="password"
-              class="form-control"
+              class="form-control input-with-icon"
               id="passwordInput"
               placeholder="Ingrese su contraseña"
               v-model="password"
@@ -37,7 +37,7 @@
           <button class="stylish-button" type="submit">Iniciar Sesión</button>
           <p>
             ¿No tienes una cuenta?
-            <a href="/RegistroUsuario/registroUsuario.html">Regístrate</a>
+            <router-link to="/Register">Regístrate</router-link>
           </p>
         </form>
       </div>
@@ -133,8 +133,51 @@ export default {
 </script>
 
 <style scoped>
+
+.form-check {
+  display: flex;
+  align-items: center;
+}
+
+.form-check-input{
+  border-color: #810aac;
+  box-shadow: 0 0 5px rgba(129, 10, 172, 0.5);
+}
+
+.form-check-input:checked {
+  background-color: #810aac;
+  border-color: #810aac;
+  box-shadow: none;
+}
+
+.form-check-label {
+  margin-left: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  line-height: 1;
+  padding-top: 2px;
+}
+
+.form-check-input {
+  vertical-align: middle;
+}
+
+.form-control {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #810aac;
+  box-shadow: 0 0 5px rgba(129, 10, 172, 0.5);
+  outline: none;
+}
 .inicio-sesion-container {
-  background-color: #8818aa; /* Morado claro para el fondo de la página */
+  background-color: #8818aa;
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Asegura que el footer esté al final */
@@ -146,10 +189,11 @@ export default {
 
 .card {
   margin: 0; /* Elimina el margen superior para centrar verticalmente */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #D3C3E5; /* Morado clarito para el fondo del formulario */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
   width: 100%; /* Asegura que el cuadro sea del ancho completo del contenedor */
-  max-width: 400px; /* Limita el ancho máximo del formulario */
+  max-width: 450px; /* Limita el ancho máximo del formulario */
+  border-radius: 12px;
   z-index: 1;
 }
 
@@ -284,5 +328,25 @@ p a:hover {
 /* Cambia el color del enlace al hacer clic */
 .register-link:active {
   color: #4B0082; /* Morado oscuro */
+}
+.form-title {
+  margin-bottom: 1cm;
+  text-align: left;
+}
+.input-icon-wrapper {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 18px;
+}
+
+.input-with-icon {
+  padding-left: 45px;
 }
 </style>
