@@ -9,7 +9,7 @@
             <div class="option">
                 <h3>💼 Ofertas de Empleo</h3>
                 <p>Encuentra oportunidades laborales ajustadas a tu experiencia.</p>
-                <a href="/ofertas.html" class="btn">Ver Ofertas</a>
+                <router-link to="/OffersPage" class="btn">Ver Ofertas</router-link>
             </div>
             <div class="option">
                 <h3>📄 Aplicaciones</h3>
